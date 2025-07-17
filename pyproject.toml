@@ -1,0 +1,54 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "optimised_route_to_travel_on_local"
+version = "0.0.1"
+description = "A project to decide the best route to take to optimise the time taken to travel the distance between two suburban destination train stations."
+authors = [
+  { name = "Kapil Divekar" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "ipython",
+    "jupyterlab",
+    "matplotlib",
+    "mkdocs",
+    "notebook",
+    "numpy",
+    "pandas",
+    "pip",
+    "pytest",
+    "python-dotenv",
+    "ruff",
+    "scikit-learn",
+    "camelot-py[base,cv]>=1.0.0",
+    "cookiecutter>=2.6.0",
+    "cookiecutter-data-science>=2.2.0",
+    "ghostscript>=0.8.1",
+    "ipykernel>=6.29.5",
+    "poetry==1.4.0",
+    "sphinx>=8.2.3",
+
+]
+requires-python = "~=3.11.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["optimised_route_to_travel_on_local"]
+include = ["pyproject.toml", "optimised_route_to_travel_on_local/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["optimised_route_to_travel_on_local"]
+force-sort-within-sections = true
+
