@@ -825,6 +825,15 @@ wheels = [
 ]
 
 [[package]]
+name = "jsonpickle"
+version = "4.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e4/a6/d07afcfdef402900229bcca795f80506b207af13a838d4d99ad45abf530c/jsonpickle-4.1.1.tar.gz", hash = "sha256:f86e18f13e2b96c1c1eede0b7b90095bbb61d99fedc14813c44dc2f361dbbae1", size = 316885, upload-time = "2025-06-02T20:36:11.57Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/73/04df8a6fa66d43a9fd45c30f283cc4afff17da671886e451d52af60bdc7e/jsonpickle-4.1.1-py3-none-any.whl", hash = "sha256:bb141da6057898aa2438ff268362b126826c812a1721e31cf08a6e142910dc91", size = 47125, upload-time = "2025-06-02T20:36:08.647Z" },
+]
+
+[[package]]
 name = "jsonpointer"
 version = "3.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1308,6 +1317,15 @@ wheels = [
 ]
 
 [[package]]
+name = "networkx"
+version = "3.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6c/4f/ccdb8ad3a38e583f214547fd2f7ff1fc160c43a75af88e6aec213404b96a/networkx-3.5.tar.gz", hash = "sha256:d4c6f9cf81f52d69230866796b82afbccdec3db7ae4fbd1b65ea750feed50037", size = 2471065, upload-time = "2025-05-29T11:35:07.804Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/eb/8d/776adee7bbf76365fdd7f2552710282c79a4ead5d2a46408c9043a2b70ba/networkx-3.5-py3-none-any.whl", hash = "sha256:0030d386a9a06dee3565298b4a734b68589749a544acbb6c412dc9e2489ec6ec", size = 2034406, upload-time = "2025-05-29T11:35:04.961Z" },
+]
+
+[[package]]
 name = "notebook"
 version = "7.4.4"
 source = { registry = "https://pypi.org/simple" }
@@ -1403,13 +1421,16 @@ dependencies = [
     { name = "jupyterlab" },
     { name = "matplotlib" },
     { name = "mkdocs" },
+    { name = "networkx" },
     { name = "notebook" },
     { name = "numpy" },
     { name = "pandas" },
+    { name = "pdfplumber" },
     { name = "pip" },
     { name = "poetry" },
     { name = "pytest" },
     { name = "python-dotenv" },
+    { name = "pyvis" },
     { name = "ruff" },
     { name = "scikit-learn" },
     { name = "sphinx" },
@@ -1426,13 +1447,16 @@ requires-dist = [
     { name = "jupyterlab" },
     { name = "matplotlib" },
     { name = "mkdocs" },
+    { name = "networkx", specifier = ">=3.5" },
     { name = "notebook" },
     { name = "numpy" },
     { name = "pandas" },
+    { name = "pdfplumber", specifier = ">=0.11.7" },
     { name = "pip" },
     { name = "poetry", specifier = "==1.4.0" },
     { name = "pytest" },
     { name = "python-dotenv" },
+    { name = "pyvis", specifier = ">=0.3.2" },
     { name = "ruff" },
     { name = "scikit-learn" },
     { name = "sphinx", specifier = ">=8.2.3" },
@@ -1515,6 +1539,20 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/78/46/5223d613ac4963e1f7c07b2660fe0e9e770102ec6bda8c038400113fb215/pdfminer_six-20250506.tar.gz", hash = "sha256:b03cc8df09cf3c7aba8246deae52e0bca7ebb112a38895b5e1d4f5dd2b8ca2e7", size = 7387678, upload-time = "2025-05-06T16:17:00.787Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/73/16/7a432c0101fa87457e75cb12c879e1749c5870a786525e2e0f42871d6462/pdfminer_six-20250506-py3-none-any.whl", hash = "sha256:d81ad173f62e5f841b53a8ba63af1a4a355933cfc0ffabd608e568b9193909e3", size = 5620187, upload-time = "2025-05-06T16:16:58.669Z" },
+]
+
+[[package]]
+name = "pdfplumber"
+version = "0.11.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pdfminer-six" },
+    { name = "pillow" },
+    { name = "pypdfium2" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/0d/4135821aa7b1a0b77a29fac881ef0890b46b0b002290d04915ed7acc0043/pdfplumber-0.11.7.tar.gz", hash = "sha256:fa67773e5e599de1624255e9b75d1409297c5e1d7493b386ce63648637c67368", size = 115518, upload-time = "2025-06-12T11:30:49.864Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/db/e0/52b67d4f00e09e497aec4f71bc44d395605e8ebcea52543242ed34c25ef9/pdfplumber-0.11.7-py3-none-any.whl", hash = "sha256:edd2195cca68bd770da479cf528a737e362968ec2351e62a6c0b71ff612ac25e", size = 60029, upload-time = "2025-06-12T11:30:48.89Z" },
 ]
 
 [[package]]
@@ -1837,6 +1875,20 @@ wheels = [
 ]
 
 [[package]]
+name = "pyvis"
+version = "0.3.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "ipython" },
+    { name = "jinja2" },
+    { name = "jsonpickle" },
+    { name = "networkx" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ab/4b/e37e4e5d5ee1179694917b445768bdbfb084f5a59ecd38089d3413d4c70f/pyvis-0.3.2-py3-none-any.whl", hash = "sha256:5720c4ca8161dc5d9ab352015723abb7a8bb8fb443edeb07f7a322db34a97555", size = 756038, upload-time = "2023-02-24T20:29:46.758Z" },
+]
+
+[[package]]
 name = "pywin32"
 version = "311"
 source = { registry = "https://pypi.org/simple" }
@@ -2144,8 +2196,8 @@ name = "secretstorage"
 version = "3.3.3"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cryptography" },
-    { name = "jeepney" },
+    { name = "cryptography", marker = "sys_platform != 'darwin'" },
+    { name = "jeepney", marker = "sys_platform != 'darwin'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/53/a4/f48c9d79cb507ed1373477dbceaba7401fd8a23af63b837fa61f1dcd3691/SecretStorage-3.3.3.tar.gz", hash = "sha256:2403533ef369eca6d2ba81718576c5e0f564d5cca1b58f73a8b23e7d4eeebd77", size = 19739, upload-time = "2022-08-13T16:22:46.976Z" }
 wheels = [
@@ -2531,7 +2583,7 @@ name = "xattr"
 version = "0.10.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "cffi" },
+    { name = "cffi", marker = "sys_platform == 'darwin'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a0/19/dfb42dd6e6749c6e6dde55b12ee44b3c8247c3cfa5b85180a60902722538/xattr-0.10.1.tar.gz", hash = "sha256:c12e7d81ffaa0605b3ac8c22c2994a8e18a9cf1c59287a1b7722a2289c952ec5", size = 15868, upload-time = "2022-12-04T02:06:18.412Z" }
 wheels = [
